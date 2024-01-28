@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+        *{
+            border: solid black 1px;
+        }
+        img{
+            height: 100px;
+        }
+</style>
+
+<body>
+    
+    <ul class="images">
+        <li class="one"><img src="/images/img.JPG" alt="" class="one"></li>
+        <li class="two"><img src="/images/img.JPG" alt="" class="two"></li>
+        <li class="three"><img src="/images/img.JPG" alt="" class="three"></li>
+        <li class="four"><img src="/images/img.JPG" alt="" class="four"></li>
+        <li class="five"><a href="https://www.google.com" class="five">Google</a></li>
+    </ul>
+
+    
+</body>
+<script>
+    document.querySelector(".images").addEventListener("click", 
+(e) => {
+    console.log(e.target)
+    console.log(e.target.parentNode)
+    
+    if(e.target.tagName === "IMG"){
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+
+    //Check if e.target is <LI> then remove it(<LI>)
+    if(e.target.tagName === "LI"){
+    e.target.remove()
+    }
+
+    e.preventDefault()
+})
+
+</script>
+</html>

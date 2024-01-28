@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Typecasting or Typeconversion
+    // Type casting is the explicit conversion of values from one type to another in JavaScript. 
+    // It involves using built-in functions or methods to explicitly convert a value to a different type.
+
+    //Number():
+    //parseInt() and parseFloat():
+    //parseInt() with a radix:
+    let binaryString = "1010";
+    let decimalNumber = parseInt(binaryString, 2); // Explicitly convert binary string to decimal number
+    
+    
+    //parseFloat() with fixed decimal places:
+    let decimalString = "3.14159";
+    let fixedDecimal = parseFloat(decimalString).toFixed(2); // Convert string to floating-point number with 2 decimal places
+    
+    
+    // String():
+    // JSON.stringify() and JSON.parse():
+    let a = { name: "John", age: 25 };
+    let jsonString = JSON.stringify(a); // Convert object to JSON string
+    let parsedObj = JSON.parse(jsonString); // Convert JSON string to object
+    
+    // Boolean():
+    
+    //Array.from():
+    let b = "Hello";
+    let charArray = Array.from(b); // Convert string to array of characters
+
+    //Object.prototype.toString():
+    let x = {};
+    let typeString = Object.prototype.toString.call(x); // Explicitly determine the type of the object
+
+    // Typecoersion:
+    // Type coercion is implicit conversion of one data type to another automatically by the JavaScript engine. 
+    // It occurs when an operator or function is applied to operands of different data types 
+    
+    // Number to String:
+    let result1 = "42" + 10; // 10 is coerced to a string, resulting in "4210"
+    console.log(result1);
+
+    // String to Number:
+    let result2 = "42" - 10; // "42" is coerced to a number, resulting in 32
+    
+    // String to Number:
+    let result3 = "5" == 5; // "5" is coerced to a number for comparison, resulting in true
+    
+    //Boolean to Number:
+    let isLogin = false;
+    let isValid = true;
+    console.log(isLogin + isValid); //O/P is 1
+    console.log(isLogin, isValid);  //O/P is false true
+
+    // Boolean to String:
+    let isTrue = true;
+    let message = "The value is " + isTrue;
+    console.log(message); // Output: "The value is true"
+
+    // Array to String:
+    let array = [1, 2, 3];
+    let str1 = "Array elements: " + array;
+    console.log(str1); // Output: "Array elements: 1,2,3"
+
+    // Object to String:
+    let obj = { name: "John", age: 25 };
+    let str = "Object: " + obj;
+    console.log(str); // Output: "Object: [object Object]"
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="Iamclass">This is heading<span style="display:none">This is hidden text</span></h1>
+    <div class="parent">
+        <div class="day">Mon</div>
+        <div class="day">Tues</div>
+        <div class="day">Wed</div>
+        <div class="day">Thurs</div>
+    </div>
+</body>
+<script src="dom_basics.js"></script>
+<script>
+    // Relations in DOM
+    // parent To children
+    const div = document.querySelector(".parent")
+    console.log(div)
+    console.log(div.children)
+
+    for(let i=0; i<div.children.length; i++){
+        console.log(div.children[i].innerHTML)
+        div.children[i].style.color = "white"
+        div.children[i].style.backgroundColor = "green"
+    }
+    console.log(div.firstElementChild)
+    console.log(div.lastElementChild)
+
+    console.log("***************************")
+    // children To parent, sibling
+    const dayOne = document.querySelector(".day")
+    console.log(dayOne)
+    console.log(dayOne.parentElement)
+    console.log(dayOne.nextElementSibling)
+
+    console.log("***************************")
+    // childNodes
+    console.log("NODES: ", div.childNodes)
+</script>
+</html>

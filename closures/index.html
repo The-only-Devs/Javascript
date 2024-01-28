@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Closures</h1>
+    <button id="grey">Grey</button>
+    <button id="yellow">Yellow</button>
+</body>
+<script src="closures.js"></script>
+<script>
+    // document.querySelector("#grey").addEventListener("click", () => {
+    //     document.body.style.backgroundColor = "grey"
+    // })
+    // document.querySelector("#yellow").addEventListener("click", () => {
+    //     document.body.style.backgroundColor = "yellow"
+    // })
+
+    //Scenario1 : Before Closure
+    //Background Color already changed before any click event
+    // function changeColor(color){
+    //     document.body.style.backgroundColor = `${color}`
+    // }
+    // document.querySelector("#grey").addEventListener("click", changeColor("grey"))
+
+    // How can we deal with it?
+    // Enclose it inside a a function
+    // function changeColor(color){
+    //     document.body.style.backgroundColor = `${color}`
+    // }
+    // document.querySelector("#grey").addEventListener("click", () => {
+    //     changeColor("grey")
+    // })
+
+    // Use closures
+    function changeColor(color){
+        console.log("working")
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+            console.log("button was clicked now")
+        }
+    }
+    document.querySelector("#grey").addEventListener("click", changeColor("grey"))
+    document.querySelector("#yellow").addEventListener("click", changeColor("yellow"))
+
+
+</script>
+
+</html>

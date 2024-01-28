@@ -1,0 +1,29 @@
+1.
+datatypes
+typecasting_typecoersion
+input
+output
+conditional_st, switchcase_st
+loops
+function
+
+2.
+string_escape_sequence
+// Strings are immutable but we can maodify the current string and store it in a new string
+// String Properties and method
+//.toUpperCase(), .toLowerCase(), .indexOf(), .lastIndexOf(), .includes()
+//.replace()
+//.slice(), .substring(), .split(), .concat()
+
+object
+array
+for..in_for..of_forEach
+higher_order_dunctions
+
+3.
+dom
+dom_new
+events
+math_Date
+time
+

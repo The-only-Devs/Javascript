@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+  </body>
+
+<!-- 
+Number -> int, float, octal, hexadecimal, pos_expo, neg_expo, Infinity, -Infinity
+String -> "  ", '  ', String interpolation `xyz ${a} ${b}` using backticks
+Boolean -> true, false
+BigInt -> (2^53 - 1) (-2^53 + 1).   BigInt("9999999999999999")  123456789012345678901234567890n
+Undefined -> Means that variable has been declared but not assigns a value
+Null -> Indicates that variable has no value(its currently empty), we may add some value in future
+Symbol -> Symbol("key")
+
+Array
+Object 
+
+Bonus:
+typeof(var_name)
+-->
+
+  <script>
+        // Primitive Datatypes in Js
+        // Number
+        
+           { let int = 10;
+            let float = 10.158;
+            let hex = 0xfff;
+            let octal = 0o30;
+            let pos_Exponential = 2.5e5;
+            let neg_Exponential = 2.5e-5;
+            console.log(int, float, hex, octal, pos_Exponential, neg_Exponential);
+
+            console.log(typeof(int, float, hex, octal, pos_Exponential, neg_Exponential));
+            console.log("*******");
+            console.log(typeof(int));
+            console.log(typeof(float));
+            console.log(typeof(hex));
+            console.log(typeof(octal));
+            console.log(typeof(pos_Exponential));
+            console.log(typeof(neg_Exponential));
+            
+            document.getElementById("demo").innerHTML =
+            `${typeof(int)}  <br> 
+            ${typeof (float)} <br> 
+            ${typeof (hex)} <br> 
+            ${typeof (octal)} <br> 
+            ${typeof (pos_Exponential)} <br> 
+            ${typeof (neg_Exponential)} <br>`
+
+            console.log("*******");
+            if(Infinity> 30){
+                console.log("Yes");
+            }
+            else{
+                console.log("No");
+            }
+
+            if(-Infinity> 30){
+                console.log("Yes");
+            }
+            else{
+                console.log("No");
+            }
+    }
+
+    console.log("*******");
+    // String
+    {
+        let a = "abc";
+        let b = 'def';
+        let c = `xyz ${a} ${b}`;//String interpolation
+        // let d = "pqr'; NOt allowed
+        console.log(a,b,c);
+        console.log(a + b + c);
+    }
+    
+    console.log("*******");
+    //Boolean
+    {
+    console.log(!false);
+    let isLogin = false;
+    let isValid = true;
+    console.log(!isLogin);
+    console.log(isLogin + isValid); //O/P is 1
+    console.log(isLogin, isValid);  //O/P is false true
+    }
+
+    console.log("*******");
+    // Undefined
+    //Means that variable has been declared but not assigns a value
+    {
+        let name;
+        console.log(name);
+        console.log(typeof(name));
+    }
+    
+    console.log("*******");
+    // Null
+    //Indicates that variable has no value(its currently empty), we may add some value in future
+    {
+        let name = null;
+        console.log(name);
+        console.log(typeof(name));
+    } 
+    
+    
+    console.log("*******");
+    //BigInt 
+    // These features are relatively new (ECMAScript 2020).
+    // Older browsers may need an alternative code (Polyfill) or
+    // The BigInt type is used when you need to perform arithmetic operations 
+    // store integer values larger than Number.MAX_SAFE_INTEGER (2^53 - 1) or smaller than Number.MIN_SAFE_INTEGER (-2^53 + 1). 
+    // These values can arise in scenarios like cryptography, financial calculations.
+    // It allows you to work with numbers beyond the limitations of the Number data type   
+    {
+    let a = 999999999999999;
+    let b = 9999999999999999;
+    console.log(a, b); //O/P is 999999999999999 10000000000000000
+    // Integers (numbers without a period or exponent notation) are accurate up to 15 digits:
+
+    // To create a BigInt, append n to the end of an integer or call BigInt()
+    let x = 9999999999999999;
+    let y = BigInt("9999999999999999");
+    let z = 123456789012345678901234567890n;
+    console.log(typeof(z)); //O/P is bigint
+
+    const bigIntToNumber = Number(123456789n); // Result: 123456789
+    }
+    // You can perform various mathematical operations with BigInt values, such as arithmetics and Comparison.
+    // Math.sqrt() or bitwise operations like |, &, ^ are not supported. 
+    // However, there are corresponding BigInt methods and libraries available to perform such operations on BigInt values if needed.
+    
+    // Keep in mind that you cannot mix BigInt values with regular Number values directly.
+    // To operate on them together, you need to convert one of the values explicitly.
+    
+    console.log("*******");
+    // Symbol
+    //Often used as object property key
+    {
+        let symbol1 = Symbol("key");
+        let symbol2 = Symbol("key");
+
+        console.log(symbol1 === symbol2); // Output: false
+    }
+    
+    //Non-primitive DataTypes
+
+    console.log("*******");
+    //Array
+    {
+        let a = [1, 2, "a", true, null];
+        console.log(a); 
+        console.log(typeof(a));
+    }
+
+    console.log("*******");
+    //Object
+    {
+        const person = {
+            age : 20,
+            eyeColor  : "blue",
+            'Rohan Das' : "friend"
+    };
+        console.log(person); 
+        console.log(typeof(person));
+    }
+  </script>
+</html>
+

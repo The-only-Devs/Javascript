@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .modalContainer{
+        position : absolute;
+        top : 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 100vw;
+        width: 100vh;
+        background-color: rgb(193, 230, 240)
+    }
+    .modal{
+        width: 50%;
+        height: 50%;
+        background-color: antiquewhite;
+    }
+</style>
+<body>
+    <button class="modalButton">Open Modal</button>
+    <div class="modalContainer">
+        <div class="modal">
+            This is modal
+        </div>
+    </div>
+</body>
+<script src="events_create_modal.js"></script>
+</html>

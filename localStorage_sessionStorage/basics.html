@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// localStorage.setItem("key", "value") => Stores unique key:value pair
+// localStorage.getItem("key") => Returns value for key, if not found returns null
+// localStorage.removeItem("key") => removes the input key
+// localStorage.clear() => clears localStorage
+// localStorage.key(index)
+
+localStorage.setItem("name", "Saikumar")
+localStorage.setItem("name", "Saikumar Gatla") //Overwrites value for same key
+localStorage.setItem("city", "Mumbai")
+let settings = {
+    theme : "dark",
+    fontSize : "large",
+    enableDesktopSite : true 
+}
+localStorage.setItem("settings", JSON.stringify(settings)) //Using JSON.stringify() to convert object in JSONstring format 
+
+console.log(localStorage)
+console.log(localStorage.getItem("name"))
+console.log(localStorage.getItem("nickName")) // op => null
+console.log(localStorage.getItem("settings").theme)//It is still a string 
+console.log(JSON.parse(localStorage.getItem("settings"))) //Now converting it into object again, using JSON.parse()
+
+
+console.log("**********************")
+let localStorageData = {
+    ...localStorage
+}
+console.log(localStorageData) 
+
+console.log(Object.keys(localStorage))
+console.log(Object.values(localStorage))
+console.log(Object.entries(localStorage))
+
+
+console.log("**********************")
+//TO AVOID OVERWRITING THE VALUES IN localStorage, do this simple Strict Check
+// if(localStorage.getItem("nickName") === null){
+//     localStorage.setItem("nickName", "Sai")
+// }
+
+localStorage.removeItem("nickName")
+localStorage.clear()
+console.log(localStorage)
+
+// We can addEventListener "storage", which triggers When the data in the storage area is modified in one window or tab, 
+// the storage event is fired in all other windows or tabs that are open on the same domain. 
+// Some common properties are:
+// e.newValue, e.oldValue, e.key, e.url, e.storageArea
+</script>
+</html>

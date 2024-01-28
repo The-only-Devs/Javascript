@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <select name="theme" id="themeSelector">
+            <option value="">Select a theme</option>
+            <option value="Dark">Dark</option>
+            <option value="Light">Light</option>
+        </select>
+    </form>
+</body>
+<script>
+    changeTheme(localStorage.getItem("theme"))//We user will revisit the tab, user will get the same settings which he had made earlier
+
+    let themeSelector = document.querySelector("#themeSelector")
+    themeSelector.addEventListener("change", (e) => {
+        console.log(e.target.value)
+        localStorage.setItem("theme", e.target.value) //To maintain consistency btw tabs we store data in localStorage
+        changeTheme(e.target.value)
+    })
+
+    function changeTheme(theme){
+        if(theme === "Dark"){
+            document.body.style.backgroundColor = "black"
+        }
+        else if(theme === "Light"){
+            document.body.style.backgroundColor = "white"
+        }
+        else{
+            document.body.style.backgroundColor = "white"
+        }
+    }
+
+    window.addEventListener("storage", (e) => {
+        if(e.key === "theme"){//Out of multiple updates in localStorage only if theme is change then only execute these changes
+            changeTheme(e.newValue)
+            themeSelector.value = e.newValue
+        }
+    })
+
+    // All browser don't allow localStorage:
+    // see the code snippet on mdn docs ,to verify if localStorage is available in browser or not
+    //Refer Coder's Gyan youtube video localStorage for explaination
+</script>
+</html>

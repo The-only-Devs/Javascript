@@ -1,0 +1,36 @@
+destructuring
+rest_spread
+this and this_practice_questions
+functions, function terminology
+IIFE
+Conditional st, loops
+functional programming_.forEach() and higher_order_function(.map(), .fiter(), .reduce(), .sort())
+
+dom basics
+dom Create_New_Element, Replace_Element, Remove_Element
+
+events basics, create modal, delete images
+
+localStorage basics, small DOM project, userSettings project
+
+closures, closures_interview_questions, Ad_DisAd_of_closures, Color_change project(closures.html)
+currying
+
+object_interview_questions,Mathpi(getOwnProperty_defineProperty) this_interview_questions
+call, apply, bind interview_questions
+call, and apply pratical useCase
+
+promise_basics, promise_chaining, promise_API, 
+traditional_promise_vs_async_await, deepdive_promise_vs_async_await, real_example, somemore_ways
+promise_interview_questions, promise_polyfills
+
+
+__proto__,prototype, prototypal chaining, constructor function, factory function
+ class in Javascript(Behind the scenes), static keyword, Inheritance and private property(#)
+getter_setter
+
+
+debounce_throttle
+
+
+

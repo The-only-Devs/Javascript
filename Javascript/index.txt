@@ -1,0 +1,45 @@
+1.
+datatypes
+typecasting_typecoersion
+input
+output
+conditional_st, switchcase_st
+loops
+function
+
+2.
+string_escape_sequence
+// Strings are immutable but we can maodify the current string and store it in a new string
+// String Properties and method
+.toUpperCase(), .toLowerCase(), .indexOf(), .lastIndexOf(), .includes()
+.replace()
+.slice(), .substring(), .split(), .concat()
+
+object
+//Array of keys, values and object entries from an object
+console.log(Object.keys(jsUser));
+console.log(Object.values(jsUser));
+console.log(Object.values(jsUser).length);
+console.log(Object.entries(jsUser));
+
+//Check if key exists in object
+console.log(jsUser.hasOwnProperty("isLoggedin"));
+.freeze()
+.asign()
+
+array
+// Array Method  .push(); .pop(), .shift(), unshift()
+.sort(), .reverse(), Array.from(), Array.from()
+.slice(), .splice()
+.includes(), indexOf()
+
+for..in_for..of_forEach
+higher_order_dunctions
+
+3.
+dom
+dom_new
+events
+math_Date
+time
+
